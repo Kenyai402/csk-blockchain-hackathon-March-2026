@@ -1,4 +1,4 @@
-# Build with Blockchain: CSK Hackathon 2026 🚀
+# Build with Blockchain: CSK Hackathon March 2026 🚀
 
 Welcome to the official repository for the **Build with Blockchain: CSK Hackathon**, organized by the Computer Society of Kirinyaga (CSK).
 
