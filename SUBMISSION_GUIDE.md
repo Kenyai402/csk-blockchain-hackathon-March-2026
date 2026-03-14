@@ -32,7 +32,7 @@ Each team must submit the following:
 
 ## Optional
 
-- Teams may also include:
+Teams may also include:
 
 • GitHub repository  
 • architecture diagrams  
