@@ -19,7 +19,6 @@ Participants are challenged to create blockchain-powered solutions that improve 
 Hackathon Start: **16 March**
 
 Week 1:  
-• Team formation  
 • Idea development  
 • Project planning  
 
