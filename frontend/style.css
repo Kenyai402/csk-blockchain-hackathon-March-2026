@@ -1,0 +1,84 @@
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 20px;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #16213e;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #e94560;
+}
+
+#walletAddress {
+    color: #a8a8b3;
+    font-size: 14px;
+}
+
+/* BUTTONS */
+button {
+    background: #e94560;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background: #c73652;
+    transition: 0.3s;
+}
+
+/* SECTIONS */
+section {
+    background: #16213e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #e94560;
+    margin-bottom: 15px;
+}
+
+/* INPUTS */
+input {
+    background: #0f3460;
+    color: white;
+    border: 1px solid #e94560;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    width: 100%;
+}
+
+/* CANDIDATE AND RESULT CARDS */
+.candidate-card, .result-card {
+    background: #0f3460;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

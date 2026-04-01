@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+          initial-scale=1.0"
+    />
+    <title>Voting DApp</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- SECTION 1: Header -->
+
+    <header>
+      <h1>🗳️ Decentralised Voting System</h1>
+      <div id="wallet-section">
+        <button id="connectWallet">Connect Wallet</button>
+        <p id="walletAddress">Not connected</p>
+      </div>
+    </header>
+
+    <!-- SECTION 2: Admin Panel -->
+    <section id="admin-panel" style="display: none">
+      <h2>Admin Panel</h2>
+
+      <!-- Add Candidate Form -->
+      <div>
+        <h3>Add Candidate</h3>
+        <input type="text" id="candidateName" placeholder="Candidate name" />
+        <button id="addCandidate">Add Candidate</button>
+      </div>
+
+      <!-- Register Voter Form -->
+      <div>
+        <h3>Register Voter</h3>
+        <input
+          type="text"
+          id="voterAddress"
+          placeholder="Voter wallet address"
+        />
+        <input type="number" id="voterAge" placeholder="Age" />
+        <input type="number" id="voterId" placeholder="Voter ID" />
+        <button id="registerVoter">Register Voter</button>
+      </div>
+
+      <!-- Voting Controls -->
+      <div>
+        <h3>Voting Controls</h3>
+        <button id="openVoting">Open Voting</button>
+        <button id="closeVoting">Close Voting</button>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Voting Panel -->
+    <section id="voting-panel" style="display: none">
+      <h2>Cast Your Vote</h2>
+
+      <!-- Candidates will be loaded here dynamically -->
+      <div id="candidates-list">
+        <!-- JavaScript will populate this -->
+      </div>
+    </section>
+
+    <!-- SECTION 4: Results Panel -->
+    <section id="results-panel" style="display: none">
+      <h2>Voting Results</h2>
+
+      <!-- Results will be loaded here dynamically -->
+      <div id="results-list">
+        <!-- JavaScript will populate this -->
+      </div>
+
+      <button id="getResults">Get Results</button>
+    </section>
+
+    <!-- Scripts -->
+    <!-- Remove the old script and replace with: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
