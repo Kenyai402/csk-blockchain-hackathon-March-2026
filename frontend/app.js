@@ -1,5 +1,5 @@
 // CONTRACT INFO
-const contractAddress = "0xB97116cc2297053F274E4dcC77A5A0d5D5C16eCf"; // paste your deployed address here
+const contractAddress = "0xB97116cc2297053F274E4dcC77A5A0d5D5C16eCf"; // paste your deployed address 
 const contractABI = [
   {
     inputs: [],
@@ -232,7 +232,7 @@ const contractABI = [
     stateMutability: "view",
     type: "function",
   },
-]; // pasted ABI here
+]; // pasted ABI
 
 // GLOBAL VARIABLES
 let provider; // connects to blockchain
@@ -299,6 +299,7 @@ async function checkIfOwner() {
   }
 }
 
+//ADD CANDIDATE FUNCTION
 async function addCandidate() {
   try {
     const name = document.getElementById("candidateName").value;
@@ -317,6 +318,8 @@ async function addCandidate() {
     alert("Error: " + error.message);
   }
 }
+
+//REGISTER VOTER FUNCTION
 async function registerVoter() {
   try {
     const address = document.getElementById("voterAddress").value;
@@ -329,7 +332,7 @@ async function registerVoter() {
     }
 
     const tx = await contract.registerVoter(address, age, id);
-    await tx.wait();
+    await tx.wait();  // wait for blockchain confirmation
 
     alert("Voter registered successfully!");
 
@@ -341,19 +344,21 @@ async function registerVoter() {
     alert("Error: " + error.message);
   }
 }
-//Open Voting
+
+//OPEN VOTING FUNCTION
 async function openVoting() {
   try {
     const tx = await contract.openVoting(); // call openVoting function on contract
-    await tx.wait();
-    await updateUI(); // refresh panels!
+    await tx.wait();  // wait for blockchain confirmation
+    await updateUI(); // refresh panels
     alert("Voting is now open!"); // user feedback
   } catch (error) {
     // error handling
     alert("Error: " + error.message); // show error to user
   }
 }
-//Close Voting
+
+//CLOSE VOTING FUNCTION
 async function closeVoting() {
   try {
     const tx = await contract.closeVoting(); // call closeVoting function on contract
@@ -365,6 +370,8 @@ async function closeVoting() {
     alert("Error: " + error.message); // show error to user
   }
 }
+
+//LOAD CANDIDATES FUNCTION
 async function loadCandidates() {
   try {
     const count = await contract.candidateCount();
@@ -389,7 +396,7 @@ async function loadCandidates() {
   }
 }
 
-// Cast Vote
+// CAST VOTE FUNCTION
 async function castVote(candidateId) {
   try {
     const tx = await contract.vote(candidateId);
@@ -402,7 +409,7 @@ async function castVote(candidateId) {
   }
 }
 
-// Update UI based on voting status
+// UPDATE UI BASED ON VOTING STATUS
 async function updateUI() {
   const isVotingOpen = await contract.votingOpen();
 
@@ -416,6 +423,7 @@ async function updateUI() {
   }
 }
 
+//GET RESULTS FUNCTION
 async function getResults() {
   try {
     const count = await contract.candidateCount();
